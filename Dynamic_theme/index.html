@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Vue Basic </title>
+</head>
+<body>
+
+<!--     
+<center>
+    <div class="counter" id="counter">
+        <button class="button"> Increment </button>
+         <span>{{counter}} </span>
+        <button class="button"> Increment </button>
+    </div>
+</center>
+
+
+<style>
+        div#counter{
+            display: flex;
+            justify-content: center;
+        }
+        button.button{
+            margin: 20px;
+        }
+    </style> -->
+
+
+
+
+    <!-- LESSON 2 -->
+
+
+<div id="app" >
+    <div class="orange" v-if="seen">  </div>
+    <div class="red" v-else></div>
+
+    <li v-for="person in people"> {{person.name}} </li>
+
+    <hr>
+    <list-item></list-item>
+    <hr>
+</div>
+
+
+<style>
+    .red{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+    }
+    .orange{
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+    }
+</style>
+
+
+
+
+<script src="vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
