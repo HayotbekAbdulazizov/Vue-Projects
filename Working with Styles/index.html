@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Working with Styles </title>
+</head>
+<body>
+    <center>
+    
+<div id="app">
+    <h4 v-bind:style = "{color:color, fontSize:'20px'}"> Hello, World !!!  </h4>
+    <button @click="change" :style="style"> Change </button>
+    <br><br><br><hr>
+    <div class="text" :styles="{style}">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores excepturi suscipit necessitatibus nisi, 
+        fuga saepe fugiat temporibus dolor amet ad veritatis, ipsa animi, exercitationem officiis eum? Molestiae 
+        dolore nesciunt doloribus!
+    </div>
+    <input type="checkbox" name="" id=""  v-model="value"  >
+    <br><br><br><hr>
+    <h4 v-bind:style="style" @mouseup="reverseMessage()"> {{message}} </h4>
+    <h4 v-bind:style="style" > {{reverseMessage()}} </h4>
+    <h4 v-bind:style="style" > {{getFullName}} </h4>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</center>
+
+<script src="vue.js"></script>
+<script src="styles.js"></script>
+</body>
+</html>
