@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <center>
+<div id="app">
+    <button v-on:click='showMessage()'> Show </button>
+
+</div>
+</center>
+
+
+<br><br><br><hr>
+<center>
+<h2> Task4 </h2>
+<div id="task4">
+    <button @click="sum()"> Show </button>
+    <h4 v-if="result"> Result : {{result}} </h4>
+    <h4 v-else> No Value!!! </h4>
+    
+    <br><br><br><hr>
+
+    <button  @click="changeValue(false)" v-if="value"> Hide </button>
+    <button  @click="changeValue(true)" v-else> Show </button>
+    <h4 v-if="value"> this.value = True </h4>
+    <h4 v-else> this.value = False </h4>
+</div>
+<br><br><br><br><br><hr>
+
+
+
+<h4> Woking with Forms </h4>
+<div id="form">
+    <h5> {{message}} </h5>
+    <input type="text" v-model="message" oninput="if(this.value.length > 8){this.value = ' '}">
+    <!-- <input type="text" v-model="message"> -->
+    <!-- <h4 v-if="this.message.length > 8">  Error !!! </h4> -->
+    <input type="radio" name="lang" value="EN" v-model='chosenLang' @click="change()">
+    <input type="radio" name="lang" value="RU" v-model='chosenLang' @click="change()">
+    <input type="radio" name="lang" value="UZ" v-model='chosenLang' @click="change()">
+    <h4 v-if="chosenLang"> {{chosenLang}} </h4>
+</div>
+
+<br><br><br><br> <hr>
+<div id="square">
+    <h5> {{color_sq}} </h5>
+    <div style="width: 600px;height: 600px; background-color: red;"   v-if="red"  > red </div>
+    <div style="width: 600px;height: 600px; background-color: blue;" v-if="blue"> blue </div>
+    <div style="width: 600px;height: 600px; background-color: yellow;" v-if="yellow"> yellow</div>
+
+    <input type="radio" value="red" name="lang"  @click="changeColor('red')">
+    <input type="radio" value="blue" name="lang"  @click="changeColor('blue')" >
+    <input type="radio" value="yellow" name="lang"  @click="changeColor('yellow')">
+</div> 
+
+<div id="range">
+
+</div>
+
+
+
+</center>
+<script src="vue.js"></script>
+<script src="cheat.js"></script>
+</body>
+</html>
